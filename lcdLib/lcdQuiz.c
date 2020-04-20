@@ -13,17 +13,17 @@ main()
   configureClocks();
   lcd_init();
   u_char width = screenWidth, height = screenHeight;
-  u_char j;
+  u_char j,i;
   clearScreen(COLOR_BLUE);
 
-  for(j = 0; j < 32; j++){
-    drawPixel(0,j,COLOR_BLACK);
-  }
   for(j = 0; j < 30; j++){
     drawPixel(j,j,COLOR_BLACK);
   }
-  for(j = 32; j >= 0; j--){
-    drawPixel(j,0,COLOR_BLACK);
+  for(j = 0; j < 30; j++){
+    drawPixel(0,j,COLOR_BLACK);
+  }
+  for(i = 0; i < 30; i++){
+    drawPixel(i,30,COLOR_BLACK);
   }
   
   //clearScreen(COLOR_BLUE);
