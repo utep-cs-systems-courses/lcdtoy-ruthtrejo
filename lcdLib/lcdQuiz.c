@@ -16,15 +16,21 @@ main()
   u_char j,i;
   clearScreen(COLOR_BLUE);
 
-  for(j = 0; j < 30; j++){
+  for(j = 0, i=0;j < 30 && i < 30;j++,i++){
     drawPixel(j,j,COLOR_BLACK);
-  }
-  for(j = 0; j < 30; j++){
     drawPixel(0,j,COLOR_BLACK);
-  }
-  for(i = 0; i < 30; i++){
     drawPixel(i,30,COLOR_BLACK);
-  }
+  } 
+  
+  // for(j = 0; j < 30; j++){
+  //drawPixel(j,j,COLOR_BLACK);
+  //}
+  // for(j = 0; j < 30; j++){
+  // drawPixel(0,j,COLOR_BLACK);
+  //}
+  // for(i = 0; i < 30; i++){
+  // drawPixel(i,30,COLOR_BLACK);
+  // }
   
   //clearScreen(COLOR_BLUE);
 
