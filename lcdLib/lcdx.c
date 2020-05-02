@@ -13,18 +13,33 @@ main()
   configureClocks();
   lcd_init();
   u_char width = screenWidth, height = screenHeight;
-  u_char j;
+  u_char i,j;
   clearScreen(COLOR_BLUE);
 
-  for(j = 0; j < 32; j++){
-    drawPixel(0,j,COLOR_BLACK);
-  }
-  for(j = 0; j < 30; j++){
-    drawPixel(j,j,COLOR_BLACK);
-  }
-  for(j = 30; j >= 0; j--){
-    drawPixel(j,0,COLOR_BLACK);
-  }
+  i = 20;
+ 
+  for (j=10; j<30; j++)
+    drawPixel(i, j, COLOR_BLACK);
+
+  for (j=10; j<30; j++)
+    drawPixel(j, i, COLOR_BLACK);
+
+  for (j=10; j<30; j++)
+    drawPixel(j, j, COLOR_BLACK);
+
+  i = 30;
+
+  for (j=10; j<30; j++)
+    drawPixel(i--, j, COLOR_BLACK);
+  // for(j = 0; j < 32; j++){
+  // drawPixel(0,j,COLOR_BLACK);
+  //}
+  // for(j = 0; j < 30; j++){
+  // drawPixel(j,j,COLOR_BLACK);
+  //}
+  //for(j = 30; j >= 0; j--){
+  // drawPixel(j,0,COLOR_BLACK);
+  //}
   
   //clearScreen(COLOR_BLUE);
 

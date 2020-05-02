@@ -3,6 +3,8 @@
 #include "led.h"
 #include "buzzer.h"
 #include "state_machine.h"
+#include "lcdutils.h"
+#include "lcddraw.h"
 
 char bottom; //bottom switch
 char top_1;  // starts from left first switch
@@ -84,7 +86,7 @@ void switch_interrupt_handler(){ //Handler for switches
   if(top_4){
     //Whenever top_4 is pressed it will start counting in binary up to 11
     // so the switch must be pressed every time to move to the next number
-    binary_count();
+    // binary_count();
+    drawStar();
   }
-
 }// end switch_interrupt_handler
