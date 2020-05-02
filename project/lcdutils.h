@@ -18,12 +18,12 @@ extern const unsigned int colors[43];
 
 
 /** Orientation */
-#define LONG_EDGE_PIXELS 160
-#define SHORT_EDGE_PIXELS 128
-#define ORIENTATION_VERTICAL 0
-#define ORIENTATION_HORIZONTAL 1
-#define ORIENTATION_VERTICAL_ROTATED 2
-#define ORIENTATION_HORIZONTAL_ROTATED 3
+#define LONG_EDGE_PIXELS				160
+#define SHORT_EDGE_PIXELS				128
+#define ORIENTATION_VERTICAL			0
+#define ORIENTATION_HORIZONTAL			1
+#define ORIENTATION_VERTICAL_ROTATED	2
+#define ORIENTATION_HORIZONTAL_ROTATED	3
 
 /** Default Orientation */
 #ifndef ORIENTATION		
@@ -61,8 +61,8 @@ void lcd_writeColor(u_int colorBGR);
 /** Colors */
 #define BLACK 0x0000
 #define WHITE 0xFFFF
-#define COLOR_BLACK BLACK
-#define COLOR_WHITE WHITE
+#define COLOR_BLACK   BLACK
+#define COLOR_WHITE   WHITE
 
 #define COLOR_BLUE              0xf800
 #define COLOR_RED 		0x001f

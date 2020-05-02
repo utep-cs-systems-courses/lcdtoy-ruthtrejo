@@ -87,6 +87,7 @@ void switch_interrupt_handler(){ //Handler for switches
     //Whenever top_4 is pressed it will start counting in binary up to 11
     // so the switch must be pressed every time to move to the next number
     // binary_count();
-    drawStar();
+    Star();
+    
   }
 }// end switch_interrupt_handler
