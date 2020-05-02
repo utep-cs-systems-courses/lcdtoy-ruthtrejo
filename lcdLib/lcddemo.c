@@ -16,8 +16,9 @@ main()
 
   clearScreen(COLOR_BLUE);
 
-  drawString5x7(20,20, "hello", COLOR_GREEN, COLOR_RED);
-
-  fillRectangle(30,30, 60, 60, COLOR_ORANGE);
+  drawString5x7(10,50, "WHAT DID THE SUSHI", COLOR_PINK, COLOR_BLUE);
+  drawString5x7(25,60, "TELL THE BEE?", COLOR_PINK, COLOR_BLUE);
+  drawString8x12(40,75,"WASABI", COLOR_WHITE, COLOR_BLACK);
+  // fillRectangle(30,30, 60, 60, COLOR_ORANGE);
   
-}
+}// end main

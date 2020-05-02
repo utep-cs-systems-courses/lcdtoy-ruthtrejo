@@ -70,7 +70,21 @@ void drawChar5x7(u_char rcol, u_char rrow, char c,
     bit <<= 1;
     row++;
   }
-}
+}// end drawChar5x7()
+
+void drawChar8x12(u_char rcol, u_char rrow, char c,
+		  u_int fgColorBGR, u_int bgColorBGR){
+  u_char oc = c - 0x20;
+
+  lcd_setArea(rcol, rrow, rcol + 7, rrow + 11);
+
+  for(u_char col = 0; col < 12; col++){
+    for(u_char bit = 128; bit > 0; bit >>= 1){
+      u_int color = (font_8x12[oc][col] & bit) ? fgColorBGR : bgColorBGR;
+      lcd_writeColor(color);
+    }
+  }
+}//end drawChar8x12()
 
 /** Draw string at col,row
  *  Type:
@@ -91,6 +105,18 @@ void drawString5x7(u_char col, u_char row, char *string,
   while (*string) {
     drawChar5x7(cols, row, *string++, fgColorBGR, bgColorBGR);
     cols += 6;
+  }
+}
+
+void drawString8x12(u_char col, u_char row, char *string,
+		    u_int fgColorBGR, u_int bgColorBGR){
+  u_char cols = col;
+
+  // Prevents text wrap
+  while(*string && (cols + 7 < screenWidth)){
+    drawChar8x12(cols, row, *string++, fgColorBGR, bgColorBGR);
+    //This line of code is the width between the characters
+    cols += 8;
   }
 }
 

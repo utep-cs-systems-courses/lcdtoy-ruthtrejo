@@ -13,24 +13,20 @@ main()
   configureClocks();
   lcd_init();
   u_char width = screenWidth, height = screenHeight;
-  u_char j;
-  u_char i;
   
   clearScreen(COLOR_BLUE);
-  for (int i = 1; i <= (30 * 2 - 1); i++){
-    if(i == 30){
-      for (j = 1; j <= (30 * 2 - 1); j++){
-	drawPixel(j,j,COLOR_BLACK);
-      }
-    }
-    else{
-      for(j = 1; j <= (30-1); j++){
-	drawPixel(j,j,COLOR_BLUE);
-      }
-      drawPixel(i,i,COLOR_BLACK);
-    }
-    //idk how to draw a new line so it goes next?
+  
+  u_char colLeft;
+  u_char colRight;
+  int i;
+  int j;
+  for(i = 15,j = 25; i < 60 && j >= 18; i++, j--){
+    drawPixel(i,j,COLOR_RED);
   }
+  for(i = 15, j = 25; i < 60 && j < 32; i++, j++){
+    drawPixel(j,i,COLOR_BLACK);
+  }
+  
   
   //clearScreen(COLOR_BLUE);
 
